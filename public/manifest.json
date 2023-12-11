@@ -1,0 +1,13 @@
+{
+  "name": "Canine Connect",
+  "short_name": "CC",
+  "description": "Find a Dog Breeder",
+  "start_url": "/public/index.html",
+  "scope": ".",
+  "display": "standalone",
+  "orientation": "portrait-primary",
+  "background_color": "#ffffff",
+  "theme_color": "#81d4fa",
+  "dir": "ltr",
+  "lang": "en-US"
+}

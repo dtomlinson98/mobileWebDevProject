@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" href="/public/img/favicon.png" type="image/x-icon" />
+    <!--minified CSS -->
+    <link rel="stylesheet" href="/public/css/materialize.min.css" />
+    <link rel="stylesheet" href="/public/css/app.css" />
+    <!--Import Google Icon Font-->
+    <link
+      href="https://fonts.googleapis.com/icon?family=Material+Icons"
+      rel="stylesheet"
+    />
+    <link rel="manifest" href="/public/manifest.json" />
+
+    <title>Canine Connect - Favorites</title>
+  </head>
+  <body id="home" class="scrollspy">
+    <!--Nav Bar-->
+    <div class="navbar-fixed">
+      <nav class="light-blue lighten-3">
+        <div class="container">
+          <div class="nav-wrapper">
+            <a href="/public/index.html" class="brand-logo">Canine Connect</a>
+            <a
+              href="/public/index.html"
+              data-target="mobile-nav"
+              class="sidenav-trigger"
+            >
+              <i class="material-icons">menu</i>
+            </a>
+            <ul class="right hide-on-med-and-down">
+              <li>
+                <a href="/public/index.html">Home</a>
+              </li>
+              <li>
+                <a href="/public/pages/search.html">Search</a>
+              </li>
+              <li>
+                <a href="/public/pages/contact.html">Contact</a>
+              </li>
+              <li>
+                <a href="/public/pages/favorites.html">Favorites</a>
+              </li>
+              <li class="logged-in">
+                <a href="#" class="waves-effect modal-trigger" data-target="modal-account">Account</a>
+            </li>
+            <li class="logged-in">
+                <a href="#" class="waves-effect" id="logout">Logout</a>
+            </li>
+            <li class="logged-out">
+                <a href="#" class="waves-effect modal-trigger" data-target="modal-login">Login</a>
+            </li>
+            <li class="logged-out">
+                <a href="#" class="waves-effect modal-trigger" data-target="modal-signup">Sign up</a>
+            </li>
+            </span>
+            <li>
+                <div class="divider"></div>
+            </li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+    </div>
+    <!--Mobile Nav-->
+    <ul class="sidenav" id="mobile-nav">
+      <li>
+        <a href="/public/index.html">Home</a>
+      </li>
+      <li>
+        <a href="/public/pages/search.html">Search</a>
+      </li>
+      <li>
+        <a href="/public/pages/contact.html">Contact</a>
+      </li>
+      <li>
+        <a href="/public/pages/favorites.html">Favorites</a>
+      </li>
+      <li class="logged-in">
+        <a href="#" class="waves-effect modal-trigger" data-target="modal-account">Account</a>
+    </li>
+    <li class="logged-in">
+        <a href="#" class="waves-effect" id="logout">Logout</a>
+    </li>
+    <li class="logged-out">
+        <a href="#" class="waves-effect modal-trigger" data-target="modal-login">Login</a>
+    </li>
+    <li class="logged-out">
+        <a href="#" class="waves-effect modal-trigger" data-target="modal-signup">Sign up</a>
+    </li>
+    </span>
+    <li>
+        <div class="divider"></div>
+    </li>
+    </ul>
+
+    <!--Breeds-->
+    <div class="breeds container grey-text text-darken-1">
+    
+        </div>
+
+  <div class="center">
+      <a class="btn-floating btn-small btn-large add-btn sidenav-trigger" data-target="side-form">
+          <i class="material-icons">add</i>
+      </a>
+  </div>
+
+  <div id="side-form" class="sidenav side-form">
+      <form class="add-breed container section">
+          <h6>New Breed</h6>
+          <div class="divider"></div>
+          <div class="input-field">
+              <input placeholder="Enter Breed" id="title" class="validate" type="text">
+              <label for="title">Breed Title</label>
+          </div>
+          <div class="input-field">
+              <input placeholder="Enter Breed description" id="description" class="validate" type="text">
+              <label for="description">Breed Description</label>
+          </div>
+
+          <div class="input-field center">
+              <button class="btn-small">Add</button>
+          </div>
+        </form>
+        </div>
+        
+        
+ <!-- SIGN UP MODAL -->
+ <div id="modal-signup" class="modal">
+  <div class="modal-content">
+      <h4>Sign up</h4><br />
+      <form id="signup-form">
+          <div class="input-field">
+              <input type="email" id="signup-email" required />
+              <label for="signup-email">Email address</label>
+          </div>
+          <div class="input-field">
+              <input type="password" id="signup-password" required />
+              <label for="signup-password">Choose password</label>
+          </div>
+          <button class="btn yellow darken-2 z-depth-0">Sign up</button>
+      </form>
+  </div>
+</div>
+<!-- LOGIN MODAL -->
+<div id="modal-login" class="modal">
+  <div class="modal-content">
+      <h4>Login</h4><br />
+      <form id="login-form">
+          <div class="input-field">
+              <input type="email" id="login-email" required />
+              <label for="login-email">Email address</label>
+          </div>
+          <div class="input-field">
+              <input type="password" id="login-password" required />
+              <label for="login-password">Your password</label>
+          </div>
+          <button class="btn yellow darken-2 z-depth-0">Login</button>
+      </form>
+  </div>
+</div>
+
+<!-- ACCOUNT MODAL -->
+<div id="modal-account" class="modal">
+  <div class="modal-content center-align">
+      <h4>Account details</h4><br />
+      <div class="account-details"></div>
+  </div>
+</div>
+</div>
+
+    <!--JavaScript-->
+    <script type="text/javascript" src="/public/js/materialize.min.js"></script>
+    <script src="/public/js/ui.js"></script>
+    <script src="/public/js/app.js"></script>
+    <script type="module" src="/public/js/db.js"></script>
+    <script type="module" src="/public/js/auth.js"></script>
+  </body>
+</html>
+
